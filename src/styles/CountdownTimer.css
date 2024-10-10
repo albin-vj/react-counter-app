@@ -1,0 +1,145 @@
+/* App container styling */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Countdown wrapper */
+  .countdown-wrapper {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Toggle button */
+  .toggle-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background-color: #ff4b3a;
+  }
+  
+  /* Date input styling */
+  .date-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ffafbd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .date-input:focus {
+    border-color: #ff9a9e;
+  }
+  
+  /* Placeholder text for empty state */
+  .placeholder-text {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Timer container */
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .countdown-timer {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Timer display styling */
+  .timer-display {
+    font-size: 3rem;
+    color: #ff6f61;
+    font-weight: bold;
+    background-color: #ffebd3;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Timer buttons styling */
+  .timer-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timer-button:hover {
+    background-color: #ff4b3a;
+  }
+  
+  .timer-button.stop {
+    background-color: #ff4b3a;
+  }
+
+  /* Reset button styling */
+.reset-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #ff4b3a;
+  }
+  
+  
