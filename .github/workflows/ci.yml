@@ -43,9 +43,14 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }} # Your Gmail username stored in GitHub Secrets
           password: ${{ secrets.SMTP_PASSWORD }} # Your Gmail app-specific password stored in GitHub Secrets
           subject: Build Success - React App
-          body: |
-            Hi,
-            The latest build of the React app has completed successfully.
+           body: |
+            <html>
+              <body>
+                <p>Hi,</p>
+                <p>The latest build of the React app has completed successfully.</p>
+                <p><a href="https://khelindiaofficial.com/counter/">Please check the latest version of app here</a>.</p>
+              </body>
+            </html>
           to: albinvjalthara@gmail.com
           from: albinvjavj@gmail.com
           secure: true
