@@ -1,0 +1,51 @@
+  name: React App CI/CD with Email Notification
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test -- --watchAll=false
+
+      - name: Build the app
+        run: npm run build
+
+  email_notification:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.SMTP_USERNAME }} # Your Gmail username stored in GitHub Secrets
+          password: ${{ secrets.SMTP_PASSWORD }} # Your Gmail app-specific password stored in GitHub Secrets
+          subject: Build Success - React App
+          body: |
+            Hi,
+            The latest build of the React app has completed successfully.
+          to: albinvjalthara@gmail.com
+          from: albinvjavj@gmail.com
+          secure: true
