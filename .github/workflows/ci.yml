@@ -38,8 +38,8 @@ jobs:
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 587
+          server_address: khelindiaofficial.com
+          server_port: 465
           username: ${{ secrets.SMTP_USERNAME }} # Your Gmail username stored in GitHub Secrets
           password: ${{ secrets.SMTP_PASSWORD }} # Your Gmail app-specific password stored in GitHub Secrets
           subject: Build Success - React App
@@ -48,5 +48,5 @@ jobs:
             The latest build of the React app has completed successfully.
           to: albinvjalthara@gmail.com
           from: albinvjavj@gmail.com
-          secure: false
+          secure: true
 
