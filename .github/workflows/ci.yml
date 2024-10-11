@@ -48,5 +48,5 @@ jobs:
             The latest build of the React app has completed successfully.
           to: albinvjalthara@gmail.com
           from: albinvjavj@gmail.com
-          secure: true
+          secure: false
 
