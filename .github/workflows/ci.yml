@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }} # Your Gmail username stored in GitHub Secrets
           password: ${{ secrets.SMTP_PASSWORD }} # Your Gmail app-specific password stored in GitHub Secrets
           subject: Build Success - React App
-           body: |
+          body: |
             <html>
               <body>
                 <p>Hi,</p>
