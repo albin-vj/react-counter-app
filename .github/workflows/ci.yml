@@ -54,4 +54,5 @@ jobs:
           to: albinvjalthara@gmail.com
           from: albinvjavj@gmail.com
           secure: true
+          content_type: text/html # Ensure content type is set to HTML
 
