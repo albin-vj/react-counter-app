@@ -36,7 +36,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: khelindiaofficial.com/counter  # The React app build folder
+          local-dir: khelindiaofficial.com/counter/  # The React app build folder
           server-dir: /public_html/  # Replace with your cPanel path
         
   email_notification:
