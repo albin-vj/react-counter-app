@@ -54,6 +54,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: /home/runner/work/react-counter-app/react-counter-app/  # The React app build folder
           server-dir: ${{ secrets.FTP_SERVER_PATH }}  # Replace with your cPanel path
+
+# Job 3: send email
         
   email_notification:
     needs: build
