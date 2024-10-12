@@ -36,8 +36,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ secrets.FTP_SERVER_PATH }}  # The React app build folder
-          server-dir: /public_html/  # Replace with your cPanel path
+          local-dir: build  # The React app build folder
+          server-dir: ${{ secrets.FTP_SERVER_PATH }}  # Replace with your cPanel path
         
   email_notification:
     needs: build
