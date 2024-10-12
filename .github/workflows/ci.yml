@@ -46,16 +46,13 @@ jobs:
         with:
           name: build-files
 
-      - name: List files in working directory
-        run: ls -R /home/runner/work/react-counter-app/react-counter-app
-
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /home/runner/work/react-counter-app/react-counter-app/build  # The React app build folder
+          local-dir: /home/runner/work/react-counter-app/react-counter-app/  # The React app build folder
           server-dir: ${{ secrets.FTP_SERVER_PATH }}  # Replace with your cPanel path
         
   email_notification:
