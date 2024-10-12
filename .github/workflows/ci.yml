@@ -52,7 +52,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build/  # The React app build folder
+          local-dir: /home/runner/work/react-counter-app/react-counter-app/build/  # The React app build folder
           server-dir: ${{ secrets.FTP_SERVER_PATH }}  # Replace with your cPanel path
         
   email_notification:
